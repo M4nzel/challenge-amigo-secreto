@@ -1,3 +1,29 @@
+document.addEventListener("DOMContentLoaded", function () {
+    let inputAmigo = document.getElementById("amigo");
+    let btnAgregar = document.querySelector(".button-add");
+
+    // Agregar evento para capturar Enter y agregar el nombre
+    inputAmigo.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault(); // Evita el envío del formulario por defecto
+            agregarAmigo();
+        }
+    });
+
+    // Cambiar color del botón según si hay texto en el input
+    inputAmigo.addEventListener("input", actualizarColorBoton);
+
+    function actualizarColorBoton() {
+        if (inputAmigo.value.trim() !== "") {
+            btnAgregar.style.backgroundColor = "#4CAF50"; // Verde
+            btnAgregar.style.color = "#ffffff"; // Texto blanco
+        } else {
+            btnAgregar.style.backgroundColor = "#ccc"; // Gris
+            btnAgregar.style.color = "#000000"; // Texto negro
+        }
+    }
+});
+
 // Array para almacenar los nombres de los amigos
 let amigos = [];
 
@@ -5,6 +31,7 @@ function agregarAmigo() {
     // Capturar el valor del input
     let inputAmigo = document.getElementById("amigo");
     let nombre = inputAmigo.value.trim(); // Elimina espacios en blanco al inicio y al final
+    let btnAgregar = document.querySelector(".button-add");
 
     // Validar que no esté vacío
     if (nombre === "") {
@@ -20,6 +47,10 @@ function agregarAmigo() {
 
     // Limpiar el campo de entrada
     inputAmigo.value = "";
+    setTimeout(() => {
+        btnAgregar.style.backgroundColor = "#ccc"; // Gris
+        btnAgregar.style.color = "#000000"; // Texto negro
+    }, 10);
 }
 
 function actualizarListaAmigos() {
