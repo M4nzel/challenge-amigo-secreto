@@ -12,7 +12,7 @@ Un juego sencillo de **Amigo Secreto** donde puedes agregar nombres a una lista 
 
 1. **Clona el repositorio:**
    ```bash
-   git clone https://github.com/tu-usuario/amigo-secreto.git
+   git clone https://github.com/M4nzel/challenge-amigo-secreto.git
    ```
 2. **Accede a la carpeta:**
    ```bash
