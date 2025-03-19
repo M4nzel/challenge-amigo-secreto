@@ -16,7 +16,7 @@ Un juego sencillo de **Amigo Secreto** donde puedes agregar nombres a una lista 
    ```
 2. **Accede a la carpeta:**
    ```bash
-   cd amigo-secreto
+   cd challenge-amigo-secreto
    ```
 3. **Abre el archivo `index.html` en tu navegador.**
 
